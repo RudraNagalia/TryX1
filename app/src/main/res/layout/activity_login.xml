@@ -5,51 +5,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="200dp"
-        android:layout_height="50dp"
-        android:src="@drawable/ic_empatica_logo"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="@id/logo"
-        app:layout_constraintStart_toStartOf="@id/logo"
-        app:layout_constraintTop_toBottomOf="@id/logo">
-
-        <TextView
-            android:id="@+id/createdAt"
-            android:layout_width="148dp"
-            android:layout_height="32dp"
-            android:font="@font/montserrat_black"
-            android:gravity="center"
-            android:text="@string/proudly_crafted"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:font="@font/montserrat_black"
-            android:text="@string/at_gmu"
-            android:textColor="@color/red"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
     <TextView
         android:id="@+id/experience"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:font="@font/montserrat_black"
+        android:font="@font/montserrat"
+        android:textColorHint="@color/empaticaDark"
         android:text="Experience.\nEvolution."
         android:textSize="40sp"
         android:textStyle="bold"
@@ -77,14 +41,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/experience">
+
             <CheckBox
                 android:id="@+id/checkbox"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:elevation="5dp"
+                android:textColorLink="#BD1D4C" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:text="I accept terms of usage and privacy policy" />
         </LinearLayout>
 
@@ -106,8 +77,29 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat"
+                android:textStyle="bold"
                 android:layout_marginStart="10dp"
                 android:text="Sign in with Google" />
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="302dp"
+        android:layout_height="91dp"
+        app:srcCompat="@drawable/sex"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-60dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="128dp"
+        android:layout_height="68dp"
+        app:srcCompat="@drawable/proudlycrafted"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="82dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
